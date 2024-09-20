@@ -1,0 +1,276 @@
+html, h1, h2, h3, picture {
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article {
+    display: block;
+}
+
+*{
+    font-family: sans-serif;
+    line-height: 1.35;
+}
+
+
+.skip-to-content-link {
+    height: 30px;
+    left: 50%;
+    padding: 8px;
+    position: absolute;
+    transform: translateY(-170%);
+    transition : transform 0.3s;
+   }
+   
+   
+   .skip-to-content-link:focus {
+     transform: translateY(0%);
+   }
+
+a:focus{
+    border: 2px solid #0a58ff;
+}
+
+a:hover{
+    color: white;
+    background-color: #0a58ff;
+}
+
+header{
+    padding: 2em 0 1em 0;
+    border-bottom: 5px solid #0a58ff;
+}
+
+h1, h2, h3, p{
+    font-family: sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	text-align: center;
+}
+
+svg {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+img {
+  display: block;
+  margin: auto;
+}
+
+h1{
+	font-size: 2em;
+	padding: 0.5em;
+}
+
+nav ul{
+	width: 100%;
+	max-width: 800px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+}
+
+ul li{
+	display: inline-block;
+}
+
+nav a{
+	display: block;
+	padding: 1em;
+	text-decoration: none;
+	font-family: sans-serif;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+}
+
+main{
+	width: calc(100% - 2em);
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+h2{
+	font-size: 1.5em;
+	margin: 0.5em 0;
+}
+
+form{
+	width: 90%;
+	max-width: 350px;
+	margin:  2em auto;
+	padding:  0.75em;
+	border: 2px solid #777;
+	border-radius: 0.2em;
+}
+
+input, label, textarea{
+	display: block;
+	width: calc(100% - 2em);
+}
+
+input, textarea, select{
+	outline: 1px solid #222;
+	border: none;
+	border-radius: 0.2em;
+}
+
+label{
+	font-size: 1.1em;
+}
+
+.required{
+	color: #c71819;
+}
+
+input{
+	width: 90%;
+	margin: 0.25em auto 0.5em auto;
+	padding: 0.5em;
+}
+
+input:focus, select:focus, textarea:focus{
+	border: 2px inset #0a58ff;
+	box-shadow: 0 0 0 0.09em currentColor;
+}
+
+input:error, select:error, textarea:error{
+	background-color: #c71819;
+}
+
+fieldset{
+	margin: 0.5em auto;
+	padding-bottom: 0.5em;
+	width: 94%;
+	border: 1px solid #222;
+	border-radius: 0.2em;
+	display: grid;
+	grid-template-columns: 30px 1fr 30px 1fr;
+}
+
+legend{
+	padding: 0.5em;
+}
+
+fieldset label{
+	display: inline;
+	width: 60%;
+}
+
+fieldset input{
+	display: inline;
+	width: 20px;
+}
+
+select{
+	display: block;
+	width: 95%;
+	margin: 0.25em auto 0.5em auto;
+	padding: 0.5em;
+	font-size: 1em;
+}
+
+textarea{
+	width: 90%;
+	height: 100px;
+	margin: 0.25em auto 0.5em auto;
+	padding: 0.5em;
+}
+
+input[type="radio"]{
+	margin-top: 0.4em;
+	outline: none;
+	border: 1px solid #222;
+	border-radius: 25%;
+}
+
+ @media screen and (max-width:1263px) {
+  main {
+    grid-template-columns: 1fr 1fr;
+  }
+   p {
+    min-height:125px;
+  }
+}
+@media screen and (max-width:900px) {
+  header {
+    grid-template-columns:2fr 1fr;
+  }
+  main {
+    grid-template-columns: 1fr;
+  }
+  p {
+    min-height:auto;
+  }
+  nav h2 {
+    visibility:visible;
+    height:auto;
+    background-color: #000000;
+    border:2px solid #ffffff;
+    color: white;
+    width: 150px;
+    cursor: pointer;
+  }
+  nav {
+    position: relative;
+    display: inline-block;
+    top:25px;
+  }
+  nav ul {
+    display: none;
+    position: absolute;
+    background-color: rgba(0,0,0,.85);
+    width:150px;
+    z-index: 1;
+  }
+  nav a {
+    color: #ffffff;
+    visibility: visible;
+    display:block;
+    text-align:center;
+  }
+  nav li {
+    border-bottom:1px solid #ffffff;
+  }
+  nav:hover ul {
+    display: block;
+  }
+}
+@media screen and (max-width:480px) {
+  header {
+    grid-template-columns: 1fr;
+    height:250px;
+  }
+  h1, nav {
+    margin:0 auto;
+    text-align:center;
+  }
+  h1 {
+    padding-top:25px;
+  }
+  nav h2, nav, nav ul {
+    border:none;
+    width:100%;
+  }
+  nav h2 {
+    background-color:#F7CE3E;
+    color:#000000;
+  }
+  nav h2:hover {
+    background-color:#000000;
+    color:#ffffff;
+    border:2px solid #F7CE3E;
+  }
+}
