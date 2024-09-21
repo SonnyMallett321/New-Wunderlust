@@ -51,6 +51,13 @@ h1, h2, h3, p{
 	text-align: center;
 }
 
+q {
+    font-family: sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	text-align: center;  
+}
+
 svg {
   display:block;
   margin-left: auto;
